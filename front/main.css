@@ -1,22 +1,49 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: 'East Sea Dokdo';
-    color: rgb(0, 4, 23);
-}
-::-webkit-scrollbar {
-    width: 10px;
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #eef6f9;
+  color: #333;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
+input, button {
+  padding: 8px;
+  margin: 5px 0;
+  font-size: 16px;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: rgb(0, 4, 23);
-    border-radius: 10px;
+button {
+  cursor: pointer;
+}
+
+.board {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(10, 30px);
+  gap: 2px;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  background: #cce4f7;
+  border: 1px solid #88b0d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell.hit {
+  background: #f77;
+}
+
+.cell.miss {
+  background: #ddd;
+}
+
+#status {
+  margin-bottom: 10px;
+  font-weight: bold;
 }

@@ -1,1 +1,33 @@
-<!doctype html><html><head><meta charset="utf-8"/><title>Battle Ship</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width,initial-scale=1"><script defer="defer" src="main.js"></script><link href="main.css" rel="stylesheet"></head><body><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Морской бой - Клиент</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <div id="login">
+    <h2>Вход / Регистрация</h2>
+    <input id="name" type="text" placeholder="Имя игрока" />
+    <input id="password" type="password" placeholder="Пароль" />
+    <button id="btnLogin">Войти / Зарегистрироваться</button>
+    <div id="loginStatus"></div>
+  </div>
+
+  <div id="lobby" style="display:none;">
+    <h2>Лобби</h2>
+    <button id="btnCreateRoom">Создать комнату</button>
+    <h3>Список комнат:</h3>
+    <ul id="roomsList"></ul>
+  </div>
+
+  <div id="game" style="display:none;">
+    <h2>Игра</h2>
+    <div id="status"></div>
+    <div id="board" class="board"></div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
